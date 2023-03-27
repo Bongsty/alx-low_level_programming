@@ -9,10 +9,10 @@
  */
 
 void swap_int(int *a, int *b)
-	/* The function that swaps the value of 2 integegrs
-	 */
+/* The function that swaps the value of 2 integers */
 {
-	int temp = *a;
-	*a = *b;
-	*b = temp;
+
+int temp = *a;
+*a = *b;
+*b = temp;
 }
