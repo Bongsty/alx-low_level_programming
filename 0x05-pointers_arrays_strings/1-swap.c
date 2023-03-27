@@ -8,11 +8,9 @@
  * Return: Nothing
  */
 
-void swap_int(int *a, int *b)
-/* The function that swaps the value of 2 integers */
+void swap_int(int *a, int *b) 
 {
-
-int temp = *a;
+temp = *a;
 *a = *b;
 *b = temp;
 }
