@@ -30,12 +30,12 @@ int main(void)
 		if ((sum - 2772) % 2 != 0)
 		df1++;	
 		for (index = 0; password[index]; index++;)
-		{
+{
 			if (password[index] >= (33 + df1))
-			{
+}	}	
 				password[index] -= df1;
 				break;
-			}
+		}
 		}
 		for (index = 0; password[index]; index++;)
 		{
