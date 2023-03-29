@@ -10,27 +10,43 @@
  */
 int main(void)
 {
-	int pass[100];
-	int i, sum, n;
+	char password[100];
+	int index = 0, sum = 0, dh1, dh2;
 
-	sum = 0;	
+	srand (time(0));	
 
-	srand(time(NULL));
-
-	for (i = 0; i < 100; i++)
+	while (sum < 2772)
 	{
-		pass[i] = rand() % 78;
-		sum += (pass[i] + '0');
-		putchar(pass[i] + '0');
-		if ((2772 - sum) - '0' < 78)
+		password[index] = 33 + rand() % 95;
+		sum += password[index++];
+	}
+	password[index] = '\0';
+
+	if (sum != 2772)
+	{
+		df1 = (sum - 2772) / 2;
+		df2 = (sum - 2772) / 2;
+
+		if ((sum - 2772) % 2 != 0)
+		df1++;	
+		for (index = 0; password[index]; index++;)
 		{
-			n = 2772 - sum - '0';
-			sum += n;
-			putchar(n + '0');
-			break;
+			if (password[index] >= (33 + df1))
+			{
+				password[index] -= df1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++;)
+		{
+			if (password[index] >= (33 + df2))
+			{
+				password[index] -= df2;
+				break;
+			}
 		}
 	}
 
-	return (0);
+	printf("%s", password);
+	return(0);
 }
-
