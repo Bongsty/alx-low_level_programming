@@ -6,6 +6,7 @@
  * @accept: Input
  * Return: Alwaays 0(Success)
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int g = 0;
@@ -25,5 +26,5 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		s++;
 	}
-	return (g)i;
+	return (g);
 	}
