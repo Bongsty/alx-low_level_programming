@@ -6,13 +6,14 @@
  *
  * Return: Always 0 (Success)
  */
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 int g = 0;
-for (; s[g] >= '\0'; g++)
+int h = n;
+for (; g < h; g++)
 {
-if (s[g] == c)
-	return (&s[i]);
+dest[g] = src[g];
+n--;
 }
-return (0);
+return (dest);
 }
